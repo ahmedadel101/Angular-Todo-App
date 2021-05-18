@@ -1,0 +1,36 @@
+<section class="container border border-3 p-5 m-5 bodyH">
+    <form class="row w-75" #add="ngForm" (ngSubmit)="Type?addData(add):editData(add)">
+        <div class="mb-3 col-lg-12 col-md-8 col-sm-12 mr-auto">
+          <input type="Text" class="form-control" 
+          id="title" placeholder="Add Title" 
+          name="title" [(ngModel)]="data.title">
+        </div>
+       <div class="form-group mt-3  col-lg-12 col-md-8 col-sm-12 mr-auto">
+         
+         <select  class="form-control " name="type" id="type" [(ngModel)]="data.type">
+           <option  value="Add Type"> Add Type</option>
+           <option value="type 1"> type 1</option>
+           <option value="type 2"> type 2</option>
+           <option value="type 3"> type 3</option>
+         </select>
+        
+       </div>
+       <div class="form-check col-lg-12 col-md-8 col-sm-12 m-auto mt-3">
+        <label class="form-check-label" for="status">
+         Add status
+        </label>
+        <input class="form-check-input" type="radio" name="status" id="status"  [(ngModel)]="data.status">
+       
+      </div>
+       
+        <div class="form-group mt-3 col-lg-12 col-md-8 col-sm-12 mr-auto">
+          <input type="text" 
+          class="form-control" 
+          name="content" id="content"  
+          placeholder="content" [(ngModel)]="data.content">
+        </div>
+          <button class="btn btn-primary w-50 col-lg-6 mt-3 col-md-8 col-sm-12 m-auto" >{{Type? "Add" : "edit"}}</button>
+
+      </form>
+</section>
+

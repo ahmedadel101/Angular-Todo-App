@@ -1,0 +1,21 @@
+
+<form class="container" [formGroup]="myForm" (ngSubmit)="contactUS()">
+    <div class="form-group mb-3">
+      <label class="mb-2" for=""> Email </label>
+      <input  type="email" class="form-control"  formControlName="email" placeholder="">
+    </div>
+    <div class="form-groupmb-3">
+      <label class="mb-2" for=""> Name </label>
+      <input type="text" class="form-control" formControlName="name" placeholder="">
+    </div>
+    <div class="form-group mb-3">
+      <label class="mb-2" for=""> Phone </label>
+      <input type="tel" class="form-control" formControlName="phone" placeholder="">
+    </div>
+    <div class="form-group mb-2">
+      <label class="mb-2" for=""> Message </label>
+      <textarea class="form-control" formControlName="message" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary px-5"> Send </button>
+</form>
